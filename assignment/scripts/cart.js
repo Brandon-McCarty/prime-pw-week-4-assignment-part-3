@@ -65,3 +65,22 @@ function isFull(array){
 
 console.log(`Basket is full (Should be true): `, isFull(basket));
 
+function addItem2(item, array){
+    console.log('in addItem2');
+    let full = isFull(array)
+    if (full === false){
+    array.push(item);
+    return true;
+    }
+    return false;
+}
+
+console.log(`Adding milk -- should be false: `, addItem2('milk', basket));
+
+console.log('-----TEST-----');
+console.log(`Removing items -- should be true: `, empty(basket));
+console.log(`The items in basket are: `, listItems(basket));
+
+console.log(`Adding jelly -- should be true: `, addItem2('jelly', basket));
+console.log(`Adding peanut butter -- should be true: `, addItem2('peanut butter', basket));
+console.log(`The items in basket are: `, listItems(basket));
