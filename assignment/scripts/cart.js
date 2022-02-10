@@ -22,11 +22,18 @@ console.log(`The items in basket are: `, listItems(basket));
 
 function empty(array){
     console.log('in empty');
-    for (let i = 0; i < array.length; i++){
-        array.pop(i);
-        return true;
+    while (array.length > 0){
+        array.pop();
     }
-}
+    return true;
+} 
+//     for (let i = 0; i < array.length; i++){
+//         array.pop();
+//     }
+//     return true;
+// }
 
+console.log(`Removing items -- should be true: `, empty(basket));
+console.log(`The items in basket are: `, listItems(basket));
 
 console.log('-----Testing Functions-----');
