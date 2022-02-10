@@ -76,6 +76,7 @@ function addItem2(item, array){
 }
 
 console.log(`Adding milk -- should be false: `, addItem2('milk', basket));
+console.log(`The items in basket are: `, listItems(basket));
 
 console.log('-----TEST-----');
 console.log(`Removing items -- should be true: `, empty(basket));
@@ -83,4 +84,19 @@ console.log(`The items in basket are: `, listItems(basket));
 
 console.log(`Adding jelly -- should be true: `, addItem2('jelly', basket));
 console.log(`Adding peanut butter -- should be true: `, addItem2('peanut butter', basket));
+console.log(`Adding bread -- should be true: `, addItem2('bread', basket));
+console.log(`The items in basket are: `, listItems(basket));
+
+function removeItem(item, array){
+    let removed = array.indexOf(item);
+    if (removed > -1){
+        array.splice(removed, 1)
+        return item;
+    }
+    return null;
+}
+
+console.log(`Remove item jelly from basket (should be jelly): `, removeItem('jelly', basket));
+console.log(`Remove item bread from basket (should be bread): `, removeItem('bread', basket));
+console.log(`Remove item milk from basket (should be null): `, removeItem('milk', basket));
 console.log(`The items in basket are: `, listItems(basket));
