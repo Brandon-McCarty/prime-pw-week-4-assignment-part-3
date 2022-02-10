@@ -37,3 +37,11 @@ console.log(`Removing items -- should be true: `, empty(basket));
 console.log(`The items in basket are: `, listItems(basket));
 
 console.log('-----Testing Functions-----');
+console.log(`Basket is ${basket}`);
+console.log(`Adding juice -- should be true: `, addItem('juice', basket));
+console.log(`Adding sandwich -- should be true: `, addItem('sandwich', basket));
+console.log(`Adding napkins -- should be true: `, addItem('napkins', basket));
+console.log(`Basket is now ${basket}`);
+console.log(`The items in basket are: `, listItems(basket));
+console.log(`Removing items -- should be true: `, empty(basket));
+console.log(`The items in basket are: `, listItems(basket));
